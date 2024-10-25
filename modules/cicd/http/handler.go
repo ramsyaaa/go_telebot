@@ -50,7 +50,7 @@ func (h *Handler) HandleMessage(c *fiber.Ctx) error {
 		return c.Status(400).JSON(helper.APIResponse("Message not found in request body", 400, "error", nil))
 	}
 
-	msg := tgbotapi.NewMessageToChannel("@cicd_flightapp", message)
+	msg := tgbotapi.NewMessageToChannel("@cicd_sensor", message)
 	_, err := h.Bot.Send(msg)
 	if err != nil {
 		return c.Status(500).JSON(helper.APIResponse("Gagal mengirim pesan", 500, "error", nil))
