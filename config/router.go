@@ -21,7 +21,7 @@ func Route() {
 	// Create a new Fiber app for the "api/v1" prefix group
 	api := fiber.New()
 
-	routes.CICDRouter(api)
+	routes.NotificationRouter(api)
 
 	// Mount the "api/v1" group under the main app
 	app.Mount("/api/v1", api)

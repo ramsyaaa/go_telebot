@@ -1,11 +1,11 @@
 package routes
 
 import (
-	"go_telebot/modules/cicd/http"
+	"go_telebot/modules/notification/http"
 
 	"github.com/gofiber/fiber/v2"
 )
 
-func CICDRouter(app *fiber.App) {
+func NotificationRouter(app *fiber.App) {
 	http.SetupRoutes(app, http.NewHandler())
 }
